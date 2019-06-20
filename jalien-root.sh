@@ -28,7 +28,8 @@ cmake $BUILDDIR                                          \
       -DJSONC="$JSON_C_ROOT"                             \
        ${OPENSSL_ROOT:+-DOPENSSL_ROOT_DIR=$OPENSSL_ROOT} \
       -DZLIB_ROOT="$ZLIB_ROOT"                           \
-      -DLWS="$LIBWEBSOCKETS_ROOT"
+      -DLWS="$LIBWEBSOCKETS_ROOT"                        \
+      -DAGU="$ALICE_GRID_UTILS_ROOT"
 make ${JOBS:+-j $JOBS} install
 
 # Modulefile
