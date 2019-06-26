@@ -13,10 +13,10 @@ overrides:
       - xalienfs
       - Alice-GRID-Utils
   AliPhysics:
-    version: "%(tag_basename)s_JALIEN"
+    version: "%(tag_basename)s_NEXT_ALIEN"
     tag: v5-09-49-01
   AliRoot:
-    version: "%(tag_basename)s_JALIEN"
+    version: "%(tag_basename)s_NEXT_ALIEN"
     source: https://github.com/atlantic777/aliroot
     tag: v5-09-49_JALIEN-01
     requires:
