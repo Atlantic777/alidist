@@ -1,24 +1,54 @@
-package: defaults-next-alien
+package: defaults-jalien
 version: v1
 disable:
   - arrow
+  - treelite
 env:
   CXXFLAGS: "-fPIC -g -O2 -std=c++11"
   CFLAGS: "-fPIC -g -O2"
   CMAKE_BUILD_TYPE: "RELWITHDEBINFO"
 overrides:
-  AliEn-ROOT-Legacy:
-    tag: "0.0.8-beta"
+  XRootD:
+    version: "%(tag_basename)s_JALIEN"
+    tag: "v4.8.6"
+    source: https://github.com/xrootd/xrootd
     build_requires:
-      - xalienfs
-      - Alice-GRID-Utils
+      - CMake
+    requires:
+      - "GCC-Toolchain:(?!osx)"
+      - "OpenSSL:(?!osx)"
+      - "osx-system-openssl:(osx.*)"
+      - ApMon-CPP
+      - libxml2
+  JDK:
+    version: "12.0.1_JALIEN"
+  libxml2:
+    version: "%(tag_basename)s_JALIEN"
+    overrides:
+    requires:
+      - zlib
+    build_requires:
+      - autotools
+      - "GCC-Toolchain:(?!osx)"
+  OpenSSL:
+    version: "v1.0.2o_JALIEN"
+    overrides:
+    requires:
+      - zlib
+    build_requires:
+      - "GCC-Toolchain:(?!osx)"
+  ApMon-CPP:
+    version: "%(tag_basename)s"
+    requires:
+      - "GCC-Toolchain:(?!osx)"
+    build_requires:
+      - autotools
   AliPhysics:
     version: "%(tag_basename)s_JALIEN"
     tag: v5-09-50-01
   AliRoot:
     version: "%(tag_basename)s_JALIEN"
-    source: https://github.com/atlantic777/aliroot
-    tag: v5-09-49_JALIEN
+    tag: v5-09-49
     requires:
       - ROOT
       - DPMJET
@@ -26,7 +56,7 @@ overrides:
       - GEANT3
       - GEANT4_VMC
       - Vc
-      - AliEn-ROOT-Legacy
+      - JAliEn-ROOT
 ---
 # This file is included in any build recipe and it's only used to set
 # environment variables. Which file to actually include can be defined by the
