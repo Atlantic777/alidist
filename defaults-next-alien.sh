@@ -18,7 +18,7 @@ overrides:
   AliRoot:
     version: "%(tag_basename)s_JALIEN"
     source: https://github.com/atlantic777/aliroot
-    tag: v5-09-49_JALIEN
+    tag: v5-09-49_JALIEN-01
     requires:
       - ROOT
       - DPMJET
