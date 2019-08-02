@@ -1,6 +1,6 @@
 package: AliEn-ROOT-Legacy
 version: "%(tag_basename)s"
-tag: "0.0.7"
+tag: "0.0.8"
 source: https://gitlab.cern.ch/jalien/alien-root-legacy.git
 requires:
   - CMake
@@ -8,6 +8,7 @@ requires:
   - ROOT
 build_requires:
   - xalienfs
+  - Alice-GRID-Utils
 append_path:
   ROOT_PLUGIN_PATH: "$ALIEN_ROOT_LEGACY_ROOT/etc/plugins"
 prepend_path:
