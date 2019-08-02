@@ -1,6 +1,6 @@
 package: AliEn-ROOT-Legacy
 version: "%(tag_basename)s"
-tag: "0.0.8"
+tag: "0.1.0-beta-1"
 source: https://gitlab.cern.ch/jalien/alien-root-legacy.git
 requires:
   - CMake
