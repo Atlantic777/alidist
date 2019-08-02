@@ -8,6 +8,7 @@ requires:
   - ROOT
 build_requires:
   - xalienfs
+  - Alice-GRID-Utils
 append_path:
   ROOT_PLUGIN_PATH: "$ALIEN_ROOT_LEGACY_ROOT/etc/plugins"
 prepend_path:
