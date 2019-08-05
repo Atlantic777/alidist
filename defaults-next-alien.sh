@@ -14,7 +14,7 @@ overrides:
       - Alice-GRID-Utils
   AliPhysics:
     version: "%(tag_basename)s_NEXT_ALIEN"
-    tag: vAN-20190801
+    tag: vAN-20190805
   AliRoot:
     version: "%(tag_basename)s_NEXT_ALIEN"
     source: https://github.com/atlantic777/aliroot
