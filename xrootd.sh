@@ -21,18 +21,18 @@ esac
 [[ -e $SOURCEDIR/bindings ]] && XROOTD_V4=True && XROOTD_PYTHON=True || XROOTD_PYTHON=False
 PYTHON_EXECUTABLE=$( $(realpath $(which python3)) -c 'import sys; print(sys.executable)')
 
-cmake "$SOURCEDIR"                                            \
-      ${CMAKE_GENERATOR:+-G "$CMAKE_GENERATOR"}               \
-      -DCMAKE_INSTALL_PREFIX=$INSTALLROOT                     \
-      -DCMAKE_INSTALL_LIBDIR=lib                              \
-      -DENABLE_CRYPTO=ON                                      \
-      -DENABLE_PERL=OFF                                       \
-      ${XROOTD_PYTHON:-DPYTHON_EXECUTABLE=$PYTHON_EXECUTABLE} \
-      -DENABLE_KRB5=OFF                                       \
-      -DENABLE_READLINE=OFF                                   \
-      -DCMAKE_BUILD_TYPE=RelWithDebInfo                       \
-      ${OPENSSL_ROOT:+-DOPENSSL_ROOT_DIR=$OPENSSL_ROOT}       \
-      ${ZLIB_ROOT:+-DZLIB_ROOT=$ZLIB_ROOT}                    \
+cmake "$SOURCEDIR"                                             \
+      ${CMAKE_GENERATOR:+-G "$CMAKE_GENERATOR"}                \
+      -DCMAKE_INSTALL_PREFIX=$INSTALLROOT                      \
+      -DCMAKE_INSTALL_LIBDIR=lib                               \
+      -DENABLE_CRYPTO=ON                                       \
+      -DENABLE_PERL=OFF                                        \
+      ${XROOTD_PYTHON:+-DPYTHON_EXECUTABLE=$PYTHON_EXECUTABLE} \
+      -DENABLE_KRB5=OFF                                        \
+      -DENABLE_READLINE=OFF                                    \
+      -DCMAKE_BUILD_TYPE=RelWithDebInfo                        \
+      ${OPENSSL_ROOT:+-DOPENSSL_ROOT_DIR=$OPENSSL_ROOT}        \
+      ${ZLIB_ROOT:+-DZLIB_ROOT=$ZLIB_ROOT}                     \
       -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-Wno-error"
 
 cmake --build . -- ${JOBS:+-j$JOBS} install
