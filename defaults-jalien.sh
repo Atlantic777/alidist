@@ -45,7 +45,7 @@ overrides:
       - autotools
   AliPhysics:
     version: "%(tag_basename)s_JALIEN"
-    tag: vAN-20190805
+    tag: vAN-20190811
   AliRoot:
     version: "%(tag_basename)s_JALIEN"
     source: https://github.com/atlantic777/aliroot
