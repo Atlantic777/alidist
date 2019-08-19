@@ -8,7 +8,7 @@ env:
   CMAKE_BUILD_TYPE: "RELWITHDEBINFO"
 overrides:
   AliEn-ROOT-Legacy:
-    tag: "0.1.0-beta-1"
+    tag: "0.1.1"
     build_requires:
       - xalienfs
       - Alice-GRID-Utils
