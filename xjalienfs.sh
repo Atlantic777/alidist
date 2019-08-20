@@ -20,7 +20,6 @@ cp -r $SOURCEDIR/bin $INSTALLROOT/bin
 ln -s ${ALIEN_PY} $INSTALLROOT/bin/alien.py
 chmod +x $INSTALLROOT/bin/*
 
-
 # Modulefile
 MODULEDIR="$INSTALLROOT/etc/modulefiles"
 MODULEFILE="$MODULEDIR/$PKGNAME"
@@ -37,6 +36,7 @@ module-whatis "ALICE Modulefile for $PKGNAME $PKGVERSION-@@PKGREVISION@$PKGHASH@
 module load ${PYTHON_VERSION:+Python/$PYTHON_VERSION-$PYTHON_REVISION}                                 \\
             ${PYTHON_MODULES_VERSION:+Python-modules/$PYTHON_MODULES_VERSION-$PYTHON_MODULES_REVISION} \\
             ${ALIEN_RUNTIME_VERSION:+AliEn-Runtime/$ALIEN_RUNTIME_VERSION-$ALIEN_RUNTIME_REVISION}     \\
+            ${OPENSSL_ROOT:+-DOPENSSL_ROOT_DIR=$OPENSSL_ROOT}                                          \\
 	    ${XROOTD_VERSION:+XRootD/$XROOTD_VERSION-$XROOTD_REVISION}
 prepend-path PYTHONPATH $XJALIENFS_SITEPACKAGES
 prepend-path PATH $INSTALLROOT/bin
