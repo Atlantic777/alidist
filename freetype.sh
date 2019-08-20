@@ -1,7 +1,7 @@
 package: FreeType
 version: v2.6
 requires:
- - AliEn-Runtime:(?!.*ppc64)
+  - zlib
 build_requires:
   - autotools
   - curl
