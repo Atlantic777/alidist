@@ -12,7 +12,7 @@ requires:
 #!/bin/bash -e
 
 # env PYTHONUSERBASE="$INSTALLROOT" pip3 install --user -r alibuild_requirements.txt
-env PYTHONUSERBASE="$INSTALLROOT" pip3 install --user file://${SOURCEDIR}
+env PYTHONUSERBASE="$INSTALLROOT" ALIBUILD=1 pip3 install --user file://${SOURCEDIR}
 XJALIENFS_SITEPACKAGES=$(find ${INSTALLROOT} -name site-packages)
 ALIEN_PY=$(find ${INSTALLROOT} -name alien.py)
 JSPY_PY=$(find ${INSTALLROOT} -name jspy.py)

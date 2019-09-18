@@ -4,6 +4,7 @@ tag: "0.5.1"
 source: https://gitlab.cern.ch/jalien/jalien-root.git
 requires:
   - ROOT
+  - xjalienfs
 build_requires:
   - libwebsockets
   - json-c
