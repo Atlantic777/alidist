@@ -3,12 +3,13 @@ version: "%(tag_basename)s"
 tag: v3.6.8
 source: https://github.com/python/cpython
 requires:
- - AliEn-Runtime:(?!.*ppc64)
  - FreeType
  - libpng
  - sqlite
  - "GCC-Toolchain:(?!osx)"
  - libffi
+ - UUID
+ - zlib
 build_requires:
  - curl
 env:
