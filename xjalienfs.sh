@@ -14,13 +14,16 @@ requires:
 # env PYTHONUSERBASE="$INSTALLROOT" pip3 install --user -r alibuild_requirements.txt
 env PYTHONUSERBASE="$INSTALLROOT" ALIBUILD=1 pip3 install --user file://${SOURCEDIR}
 XJALIENFS_SITEPACKAGES=$(find ${INSTALLROOT} -name site-packages)
-ALIEN_PY=$(find ${INSTALLROOT} -name alien.py)
-JSPY_PY=$(find ${INSTALLROOT} -name jspy.py)
 
-cp -r $SOURCEDIR/bin $INSTALLROOT/bin
-ln -s ${ALIEN_PY} $INSTALLROOT/bin/alien.py
-ln -s ${JSPY_PY} $INSTALLROOT/bin/jspy.py
-chmod +x $INSTALLROOT/bin/*
+pushd ${INSTALLROOT}
+	ALIEN_PY=$(find -name alien.py)
+	JSPY_PY=$(find -name jspy.py)
+
+	cp -r $SOURCEDIR/bin ./bin
+	ln -s ${ALIEN_PY} ./bin/alien.py
+	ln -s ${JSPY_PY} ./bin/jspy.py
+	chmod +x ./bin/*
+popd
 
 
 # Modulefile
