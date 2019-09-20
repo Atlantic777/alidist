@@ -10,6 +10,7 @@ requires:
  - libffi
  - UUID
  - zlib
+ - "OpenSSL:(?!osx)"
 build_requires:
  - curl
 env:
