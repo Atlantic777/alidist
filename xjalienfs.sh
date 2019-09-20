@@ -18,7 +18,7 @@ XJALIENFS_SITEPACKAGES=$(find ${INSTALLROOT} -name site-packages)
 ALIEN_PY=$(find ${INSTALLROOT} -name alien.py)
 
 cp -r $SOURCEDIR/bin ${INSTALLROOT}/bin
-ln -nsfr ${ALIEN_PY} ${INSTALLROOT}/bin/alien.py
+cp ${ALIEN_PY} ${INSTALLROOT}/bin/alien.py
 chmod +x ${INSTALLROOT}/bin/*
 
 
