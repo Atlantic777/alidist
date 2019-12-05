@@ -4,8 +4,7 @@ tag: v1.0.14r1-alice3
 source: https://github.com/alisw/xalienfs.git
 requires:
  - XRootD
- - "OpenSSL:(?!osx)"
- - "osx-system-openssl:(osx.*)"
+ - OpenSSL
  - AliEn-Runtime
 build_requires:
  - autotools
