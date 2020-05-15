@@ -44,8 +44,8 @@ cmake "$BUILDDIR"                                                     \
       -DENABLE_PERL=OFF                                               \
       ${XROOTD_PYTHON:+-DENABLE_PYTHON=ON}                            \
       ${XROOTD_PYTHON:+-DPYTHON_EXECUTABLE=$PYTHON_EXECUTABLE}        \
-      ${UUID_ROOT:+-DUUID_LIBRARIES=$UUID_ROOT/lib/libuuid.so}        \
-      ${UUID_ROOT:+-DUUID_INCLUDE_DIRS=$UUID_ROOT/include}            \
+      ${UUID_ROOT:+-DUUID_LIBRARY=$UUID_ROOT/lib}                     \
+      ${UUID_ROOT:+-DUUID_INCLUDE_DIR=$UUID_ROOT/include}             \
       -DENABLE_KRB5=OFF                                               \
       -DENABLE_READLINE=OFF                                           \
       -DCMAKE_BUILD_TYPE=RelWithDebInfo                               \
