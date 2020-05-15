@@ -42,6 +42,7 @@ cmake "$BUILDDIR"                                                     \
       -DCMAKE_INSTALL_LIBDIR=lib                                      \
       -DENABLE_CRYPTO=ON                                              \
       -DENABLE_PERL=OFF                                               \
+      -DENABLE_VOMS=OFF                                               \
       ${XROOTD_PYTHON:+-DENABLE_PYTHON=ON}                            \
       ${XROOTD_PYTHON:+-DPYTHON_EXECUTABLE=$PYTHON_EXECUTABLE}        \
       ${UUID_ROOT:+-DUUID_LIBRARY=$UUID_ROOT/lib}                     \
