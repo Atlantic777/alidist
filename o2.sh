@@ -112,6 +112,7 @@ valid_defaults:
   - o2-dev-fairroot
   - alo
   - o2-prod
+  - o2-gsi
 ---
 #!/bin/sh
 export ROOTSYS=$ROOT_ROOT
