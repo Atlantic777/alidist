@@ -7,6 +7,7 @@ env:
   CFLAGS: "-fPIC -g -O2"
   CMAKE_BUILD_TYPE: "RELWITHDEBINFO"
   USE_AUTORECONF: "false"
+  SETUPTOOLS_USE_DISTUTILS: "stdlib"
 overrides:
   AliRoot:
     version: "%(tag_basename)s_JALIEN"
