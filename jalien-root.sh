@@ -1,7 +1,7 @@
 package: JAliEn-ROOT
 version: "%(tag_basename)s"
 tag: "0.6.3-rc0"
-source: https://gitlab.cern.ch/jalien/jalien-root.git
+source: https://gitlab.cern.ch/nhardi/jalien-root.git
 requires:
   - ROOT
   - xjalienfs
